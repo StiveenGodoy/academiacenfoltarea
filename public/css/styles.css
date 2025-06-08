@@ -8,100 +8,154 @@
     }
 }
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: transparent;
-    color: inherit;
+/* Animación en íconos de botones */
+.btnAni .elementor-button-icon {
+  transition: transform 0.3s ease;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 600;
-    letter-spacing: 0.5px;
+.btnAni:hover .elementor-button-icon {
+  transform: translateX(8px);
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-    transition: color 0.3s ease;
+/* Ocultar pestaña de retiros en dashboard */
+.tutor-dashboard-menu-item a[href*="withdraw"] {
+  display: none !important;
 }
 
-a:hover {
-    color: #0077cc;
+/* Estilo contenedor login y registro */
+.tutor-login-wrap, #tutor-registration-wrap {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 0px 0 0px 0;
+  box-shadow: none !important;
 }
 
-button {
-    padding: 10px 20px;
-    border-radius: 4px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+.tutor-login-form-wrapper, #tutor-registration-form {
+  padding: 24px 24px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
-button:hover {
-    background-color: #f0f0f0;
-    transform: scale(1.02);
+/* Centrado de títulos */
+.tutor-fs-5.tutor-color-black.tutor-mb-32,
+.tutor-fs-4.tutor-color-black.tutor-mb-32 {
+  text-align: center;
+  display: block;
+  width: 100%;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    transition: opacity 0.3s ease;
+/* Espaciado vertical en secciones */
+.tutor-py-48 {
+  padding-top: 48px;
+  padding-bottom: 0px;
 }
 
-img:hover {
-    opacity: 0.95;
+/* Botones al 100% en móviles */
+@media (max-width: 575.98px) {
+  .tutor-modal .tutor-btn:not(.tutor-is-icon-btn) {
+    max-width: 100% !important;
+  }
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+/* Ajuste de padding en precios */
+.price {
+  padding-right: 20px !important;
 }
 
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -10px;
+/* Reemplazo del texto por el logo (dashboard) */
+.tutor-fs-5.tutor-color-black.tutor-mb-32 {
+  font-size: 0px !important;
 }
 
-.col {
-    flex: 1;
-    padding: 10px;
-    min-width: 200px;
+.tutor-fs-5.tutor-color-black.tutor-mb-32::before {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 60px;
+  background-image: url('/public/img/LOGO.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto 16px auto;
 }
 
-.card {
-    border: 1px solid #eaeaea;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    transition: box-shadow 0.3s ease;
+/* Reemplazo del texto por el logo (modal de login) */
+.tutor-fs-4.tutor-fw-medium.tutor-color-black.tutor-mb-32 {
+  font-size: 0 !important;
+  margin-bottom: 16px;
 }
 
-.card:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.tutor-fs-4.tutor-fw-medium.tutor-color-black.tutor-mb-32::before {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 60px;
+  background-image: url('/public/img/LOGO.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto 12px auto;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    font-size: 14px;
-    color: #666;
+/* Estilo del contenedor del modal */
+.tutor-modal-content {
+  margin: 20px auto !important;
+  border-radius: 12px;
+  max-width: calc(100% - 40px);
+  box-sizing: border-box;
 }
 
-.hidden {
-    display: none;
+/* Botón de acceso a pantalla completa */
+.tutor-btn.tutor-btn-primary.tutor-btn-block {
+  display: block;
+  width: 100% !important;
+  box-sizing: border-box;
 }
 
-.visible {
-    display: block;
+/* Ajuste de margen superior en móvil */
+@media (max-width: 767px) {
+  .tutor-mt-72 {
+    margin-top: 0 !important;
+  }
 }
 
-.fade-in {
-    animation: fadeIn 1s ease-in-out;
+/* Ocultar calificaciones */
+.ratings {
+  display: none !important;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+/* Ocultar información extra en perfil del instructor */
+.profile-name.tutor-color-white > *:not(h3) {
+  display: none !important;
 }
+
+/*Botones personalizados del menú móvil*/
+.btnIcon .elementor-button-content-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.btnIcon .elementor-button-icon {
+  font-size: 24px !important;
+  color: #0D2143 !important;
+  fill: #0D2143 !important;
+}
+
+
+.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
+.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+    background-image: none !important;
+}
+@media screen and (max-height: 1024px) {
+    .e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
+    .e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
+        background-image: none !important;
+    }
+}
+@media screen and (max-height: 640px) {
+    .e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
+    .e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
+        background-image: none !important;
+    }
+}
+		
