@@ -2,8 +2,6 @@
     max-width: none !important;
 }
 
-
-
 @media (min-width: 922px) {
     .site-content .ast-container {
         display: block !important;
